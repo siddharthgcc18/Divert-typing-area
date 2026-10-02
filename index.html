@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#2563eb">
+
+    <title>Typing Area </title>
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- =================================================
+     FEEDBACK MODAL
+================================================= -->
+
+<div id="feedbackModal" class="feedback-modal hidden">
+
+    <div class="feedback-box">
+
+        <button type="button" id="closeFeedback" class="feedback-close">
+            ×
+        </button>
+
+        <div class="feedback-icon">
+            💬
+        </div>
+
+        <h2>Send Feedback</h2>
+
+        <p class="feedback-subtitle">
+            Help me improve Typing Area.
+            Your feedback is valuable!
+        </p>
+
+
+        <form id="feedbackForm">
+
+            <label>
+                Your Name
+            </label>
+
+            <input type="text" id="feedbackName" placeholder="Enter your name" maxlength="40" required>
+
+
+            <label>
+                Your Email
+            </label>
+
+            <input type="email" id="feedbackEmail" placeholder="Enter your email" required>
+
+
+            <label>
+                Your Feedback
+            </label>
+
+            <textarea id="feedbackMessage" placeholder="Write your feedback here..." maxlength="1000"
+                required></textarea>
+
+
+            <button type="submit" class="feedback-submit">
+                Send Feedback →
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<body>
+
+    <!-- =====================================================
+     INTRO SCREEN
+===================================================== -->
+
+    <section id="intro">
+
+        <div class="grid"></div>
+
+        <div class="intro">
+
+            <div class="key">⌨</div>
+
+            <div class="eyebrow">
+                WELCOME TO
+            </div>
+
+            <h1>
+                TYPING AREA
+
+                <span>
+                    BY SIDDHARTH
+                </span>
+            </h1>
+
+            <p>
+                Practice smarter. Type faster. Prepare better.
+
+            </p>
+
+
+            <button id="enter" class="btn primary large">
+
+                Enter Typing Area →
+
+            </button>
+
+            <div class="pills">
+
+                <span class="pill">
+                    🎯 Exam Practice
+                </span>
+
+                <span class="pill">
+                    🏆 Ranks
+                </span>
+
+                <span class="pill">
+                    ⚡ Typing Game
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+     MAIN APP
+===================================================== -->
+
+    <div id="app" class="hidden">
+
+
+        <!-- =================================================
+         HEADER
+    ================================================== -->
+
+        <header class="top">
+
+            <a href="#" class="brand" data-page="home">
+
+                <i>⌨</i>
+
+                <span>
+                    Typing<b>Area</b>
+                </span>
+
+                <small>
+
+                </small>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav">
+
+                <button data-page="home" class="active">
+
+                    Home
+
+                </button>
+
+                <button data-page="practice">
+
+                    Practice
+
+                </button>
+
+                <button data-page="exams">
+
+                    Govt Exams
+
+                </button>
+
+                <button data-page="game">
+
+                    Typing Game
+
+                </button>
+
+                <button data-page="ranking">
+
+                    Ranking
+
+                </button>
+
+            </nav>
+
+
+            <!-- HEADER ACTIONS -->
+
+            <div class="actions">
+                <a href="donation.html" class="donate-btn">
+                    Donate
+                </a>
+
+
+                <button id="theme" class="icon">
+
+                    ☾
+
+                </button>
+
+
+                <button id="profile" class="profile">
+
+                    <span id="avatar" class="avatar">
+
+                        G
+
+                    </span>
+
+                    <span>
+
+                        <b id="name">
+                            Guest
+                        </b>
+
+                        <small id="accountRank">
+                            🥉 Bronze
+                        </small>
+
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+         MAIN
+    ================================================== -->
+
+        <main>
+
+
+            <!-- =================================================
+             HOME
+        ================================================== -->
+
+            <section id="home" class="page active">
+
+                <div class="container home">
+
+                    <div>
+
+                        <div class="eyebrow" style="color:#2563eb">
+
+                            YOUR TYPING DASHBOARD
+
+                        </div>
+
+
+                        <h2>
+
+                            Build your speed.
+                            <br>
+
+                            <span>
+                                Beat your best.
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+
+                            Practice everyday typing,
+                            government-exam style tests
+                            and fast typing games —
+                            all in one place.
+
+                        </p>
+
+
+                        <div class="actions">
+
+                            <button class="btn primary" data-page="practice">
+
+                                Start Practice
+
+                            </button>
+
+
+                            <button class="btn secondary" data-page="exams">
+
+                                Explore Exams
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RANK CARD -->
+
+                    <div class="rankcard">
+
+                        <small>
+                            Your Rank
+                        </small>
+
+                        <div id="homeRank" class="big">
+
+                            Bronze
+
+                        </div>
+
+                        <small id="homeLevel">
+
+                            Level 1 · 0 XP
+
+                        </small>
+
+
+                        <div class="track" style="margin-top:17px">
+
+                            <div id="homeFill" class="fill">
+
+                            </div>
+
+                        </div>
+
+
+                        <small id="homeNext">
+
+                            500 XP to Silver
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK START -->
+
+                <div class="container section">
+
+                    <div class="eyebrow" style="color:#2563eb">
+
+                        QUICK START
+
+                    </div>
+
+                    <h3>
+                        Choose your mode
+                    </h3>
+
+
+                    <div class="features">
+
+
+                        <button class="feature" data-page="practice">
+
+                            <div class="fi">
+                                ⌨
+                            </div>
+
+                            <h4>
+                                Typing Practice
+                            </h4>
+
+                            <p>
+                                Improve WPM,
+                                accuracy and consistency.
+                            </p>
+
+                        </button>
+
+
+                        <button class="feature" data-page="exams">
+
+                            <div class="fi">
+                                ▣
+                            </div>
+
+                            <h4>
+                                Government Exams
+                            </h4>
+
+                            <p>
+                                Practice SSC,
+                                Railway and other formats.
+                            </p>
+
+                        </button>
+
+
+                        <button class="feature" data-page="game">
+
+                            <div class="fi">
+                                ⚡
+                            </div>
+
+                            <h4>
+                                Type Rush
+                            </h4>
+
+                            <p>
+                                Turn practice into
+                                a quick typing game.
+                            </p>
+
+                        </button>
+
+
+                        <button class="feature" data-page="ranking">
+
+                            <div class="fi">
+                                🏆
+                            </div>
+
+                            <h4>
+                                Ranking
+                            </h4>
+
+                            <p>
+                                Earn XP and
+                                climb to Master.
+                            </p>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="container section">
+
+                    <div class="eyebrow" style="color:#2563eb">
+
+                        YOUR STATS
+
+                    </div>
+
+                    <h3>
+                        Keep improving
+                    </h3>
+
+
+                    <div class="stats">
+
+                        <div class="stat">
+
+                            <span>
+                                Best WPM
+                            </span>
+
+                            <strong id="bestWpm">
+                                0
+                            </strong>
+
+                            <small>
+                                words/min
+                            </small>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span>
+                                Best Accuracy
+                            </span>
+
+                            <strong id="bestAcc">
+                                0%
+                            </strong>
+
+                            <small>
+                                accuracy
+                            </small>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span>
+                                Tests Done
+                            </span>
+
+                            <strong id="tests">
+                                0
+                            </strong>
+
+                            <small>
+                                completed
+                            </small>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span>
+                                XP Earned
+                            </span>
+
+                            <strong id="xp">
+                                0
+                            </strong>
+
+                            <small>
+                                total XP
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+             TYPING PRACTICE
+        ================================================== -->
+
+            <section id="practice" class="page">
+
+                <div class="container">
+
+
+                    <div class="title">
+
+                        <div>
+
+                            <div class="eyebrow" style="color:#2563eb">
+
+                                TYPING LAB
+
+                            </div>
+
+                            <h2>
+                                Typing Practice
+                            </h2>
+
+                            <p>
+                                Start from Level 1
+                                and improve step by step.
+                            </p>
+
+                        </div>
+
+
+                        <select id="mode">
+
+                            <option value="general">
+                                General Practice
+                            </option>
+
+                            <option value="beginner">
+                                Beginner
+                            </option>
+
+                            <option value="advanced">
+                                Advanced
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- LEVEL BUTTONS -->
+
+                    <div id="levelBar" class="levelbar">
+
+                    </div>
+
+
+                    <!-- LEVEL INFORMATION -->
+
+                    <div class="level-info">
+
+                        <div>
+
+                            <strong id="levelTitle">
+                                Level 1 · Beginner
+                            </strong>
+
+                            <br>
+
+                            <span id="levelDescription">
+                                Easy words and short sentences.
+                            </span>
+
+                        </div>
+
+
+                        <span id="levelStatus">
+                            ✓ Unlocked
+                        </span>
+
+                    </div>
+
+
+                    <!-- STATS -->
+
+                    <div class="stats typingstats">
+
+                        <div class="stat">
+
+                            <span>
+                                Time
+                            </span>
+
+                            <strong id="time">
+                                60
+                            </strong>
+
+                            <small>
+                                seconds
+                            </small>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span>
+                                WPM
+                            </span>
+
+                            <strong id="wpm">
+                                0
+                            </strong>
+
+                            <small>
+                                speed
+                            </small>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span>
+                                Accuracy
+                            </span>
+
+                            <strong id="acc">
+                                100%
+                            </strong>
+
+                            <small>
+                                precision
+                            </small>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <span>
+                                Errors
+                            </span>
+
+                            <strong id="errors">
+                                0
+                            </strong>
+
+                            <small>
+                                mistakes
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TYPING PANEL -->
+
+                    <div class="panel">
+
+                        <div class="panelhead">
+
+                            <span>
+
+                                <i class="dot"></i>
+
+                                Live typing test
+
+                            </span>
+
+
+                            <span id="status" style="color:var(--muted)">
+
+                                Ready
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- PASSAGE -->
+
+                        <div id="typingText" class="typingtext">
+
+                        </div>
+
+
+                        <!-- INPUT -->
+
+                        <textarea id="typingInput" placeholder="Start typing here..." spellcheck="false">
+                    </textarea>
+
+
+                        <div class="controls">
+
+                            <select id="duration">
+
+                                <option value="15">
+                                    15 seconds
+                                </option>
+
+                                <option value="30">
+                                    30 seconds
+                                </option>
+
+                                <option value="60" selected>
+
+                                    60 seconds
+
+                                </option>
+
+                                <option value="120">
+                                    120 seconds
+                                </option>
+
+                            </select>
+
+
+                            <button id="newTest" class="btn primary">
+
+                                ↻ New Test
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESULT -->
+
+                    <div id="result" class="result hidden">
+
+                        <div style="font-size:30px">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <div class="eyebrow" style="color:#16a34a">
+
+                                TEST COMPLETE
+
+                            </div>
+
+                            <b id="resultText">
+                                Great work!
+                            </b>
+
+                        </div>
+
+
+                        <button id="again" class="btn primary">
+
+                            Try Again
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+             GOVERNMENT EXAMS
+        ================================================== -->
+
+            <section id="exams" class="page">
+
+                <div class="container">
+
+
+                    <div class="title">
+
+                        <div>
+
+                            <div class="eyebrow" style="color:#2563eb">
+
+                                EXAM ZONE
+
+                            </div>
+
+                            <h2>
+                                Government Exam Typing
+                            </h2>
+
+                            <p>
+                                Select an exam and
+                                practice its separate set.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notice">
+
+                        <b>Important:</b>
+
+                        These are practice/mock
+                        sets. Always check the latest
+                        official examination notification
+                        for exact requirements.
+
+                    </div>
+
+
+                    <!-- SEARCH -->
+
+                    <div class="filter">
+
+                        <input id="search" placeholder="Search exam or department...">
+
+
+                        <select id="cat">
+
+                            <option value="all">
+                                All categories
+                            </option>
+
+                            <option value="ssc">
+                                SSC
+                            </option>
+
+                            <option value="railway">
+                                Railway
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- EXAM CARDS -->
+
+                    <div id="examList" class="exams">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+             TYPING GAME
+        ================================================== -->
+
+            <section id="game" class="page">
+
+                <div class="container">
+
+
+                    <div class="title">
+
+                        <div>
+
+                            <div class="eyebrow" style="color:#ea580c">
+
+                                GAME MODE
+
+                            </div>
+
+                            <h2>
+                                Type Rush ⚡
+                            </h2>
+
+                            <p>
+                                Type the shown word
+                                as quickly as possible.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel">
+
+
+                        <div class="gameTop">
+
+                            <div>
+
+                                <span>
+                                    TIME
+                                </span>
+
+                                <strong id="gtime">
+                                    60
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    COMBO
+                                </span>
+
+                                <strong id="combo">
+                                    0×
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    SCORE
+                                </span>
+
+                                <strong id="score">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- GAME ARENA -->
+
+                        <div class="arena">
+
+
+                            <div id="overlay" class="overlay">
+
+                                <div>
+
+                                    <div style="font-size:45px">
+
+                                        ⚡
+
+                                    </div>
+
+                                    <h3>
+                                        Ready for Type Rush?
+                                    </h3>
+
+                                    <p>
+                                        60 seconds.
+                                        Type as many
+                                        words as possible.
+                                    </p>
+
+                                    <button id="startGame" class="btn primary">
+
+                                        Start Game
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="word" class="word">
+
+                                typing
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- GAME INPUT -->
+
+                        <div class="gameinput">
+
+                            <input id="gameInput" disabled placeholder="Type the word...">
+
+
+                            <button id="submitGame" class="btn primary" disabled>
+
+                                Submit
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+             RANKING
+        ================================================== -->
+
+            <section id="ranking" class="page">
+
+                <div class="container">
+
+
+                    <div class="title">
+
+                        <div>
+
+                            <div class="eyebrow" style="color:#b77900">
+
+                                RANK SYSTEM
+
+                            </div>
+
+                            <h2>
+                                Climb the ranks
+                            </h2>
+
+                            <p>
+                                Earn XP from typing
+                                practice and games.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CURRENT RANK -->
+
+                    <div class="rankhero">
+
+
+                        <div id="medal" class="medal">
+
+                            🥉
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="eyebrow" style="color:#b77900">
+
+                                CURRENT RANK
+
+                            </div>
+
+                            <h3 id="rank">
+                                Bronze
+                            </h3>
+
+                            <p id="rankxp">
+                                0 XP · Level 1
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <div style="
+                            display:flex;
+                            justify-content:space-between;
+                            font-size:11px;
+                            color:var(--muted);
+                            margin-bottom:7px">
+
+                                <span id="rprog">
+                                    0 / 500 XP
+                                </span>
+
+                                <span id="rnext">
+                                    Silver
+                                </span>
+
+                            </div>
+
+
+                            <div class="track">
+
+                                <div id="rankfill" class="fill">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RANK LIST -->
+
+                    <div class="ranklist">
+
+
+                        <div class="rankrow">
+
+                            <span>
+                                🥉
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    Bronze
+                                </b>
+
+                                <small>
+                                    Starting rank
+                                </small>
+
+                            </div>
+
+                            <b>
+                                0 XP
+                            </b>
+
+                        </div>
+
+
+                        <div class="rankrow">
+
+                            <span>
+                                🥈
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    Silver
+                                </b>
+
+                                <small>
+                                    Keep building
+                                </small>
+
+                            </div>
+
+                            <b>
+                                500 XP
+                            </b>
+
+                        </div>
+
+
+                        <div class="rankrow">
+
+                            <span>
+                                🥇
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    Gold
+                                </b>
+
+                                <small>
+                                    Strong practice
+                                </small>
+
+                            </div>
+
+                            <b>
+                                1,500 XP
+                            </b>
+
+                        </div>
+
+
+                        <div class="rankrow">
+
+                            <span>
+                                💎
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    Platinum
+                                </b>
+
+                                <small>
+                                    Advanced
+                                </small>
+
+                            </div>
+
+                            <b>
+                                3,000 XP
+                            </b>
+
+                        </div>
+
+
+                        <div class="rankrow">
+
+                            <span>
+                                🔷
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    Diamond
+                                </b>
+
+                                <small>
+                                    Elite
+                                </small>
+
+                            </div>
+
+                            <b>
+                                6,000 XP
+                            </b>
+
+                        </div>
+
+
+                        <div class="rankrow">
+
+                            <span>
+                                👑
+                            </span>
+
+                            <div>
+
+                                <b>
+                                    Master
+                                </b>
+
+                                <small>
+                                    Top tier
+                                </small>
+
+                            </div>
+
+                            <b>
+                                10,000 XP
+                            </b>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notice" style="margin-top:15px">
+
+                        Your progress is currently
+                        saved in this browser.
+                        A real online leaderboard
+                        will require a backend/database.
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =================================================
+     FOOTER
+================================================= -->
+
+        <footer class="footer">
+
+            <div class="footer-top">
+
+                <div class="footer-brand">
+                    <h3>⌨ Typing Area by Siddhu</h3>
+                    <p>
+                        Practice • Progress • Perform
+                    </p>
+                </div>
+
+
+                <div class="footer-links">
+
+                    <button type="button" id="feedbackBtn" class="footer-link">
+                        💬 Feedback
+                    </button>
+
+                    <!-- <a href="mailto:iambestsidd0001@gmail.com?subject=Comment%20-%20Typing%20Area" class="footer-link">
+                        💡 Leave a Comment
+                    </a> -->
+
+                </div>
+
+
+                <div class="footer-social">
+
+                    <a href="https://github.com/siddharthgcc18" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/siddharth-tiwari-65a775427" target="_blank"
+                        rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+
+                    <!-- Instagram link baad me add karna -->
+                    <a href="https://www.instagram.com/i_am_siddhu_767?stkn=MXd2eDlmM2ltd3J5cA==" target="_blank"
+                        rel="noopener noreferrer">
+                        Instagram
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Typing Area by Siddharth--
+                </span>
+
+                <span>
+                    Made with ❤️
+                </span>
+
+            </div>
+
+        </footer>
+
+
+
+        <!-- =====================================================
+     PROFILE MODAL
+===================================================== -->
+
+        <div id="modal" class="modal hidden">
+
+
+            <div class="modalbox">
+
+
+                <button id="close" class="close">
+
+                    ×
+
+                </button>
+
+                <button type="button" id="feedbackBtn" class="footer-link">
+                    💬 Feedback
+                </button>
+
+
+                <div id="mavatar" class="modalavatar">
+
+                    G
+
+                </div>
+
+
+                <div class="eyebrow" style="color:#2563eb">
+
+                    YOUR PROFILE
+
+                </div>
+
+
+                <h3>
+                    Profile
+                </h3>
+
+
+                <p>
+                    Set a display name for this browser.
+                </p>
+
+
+                <input id="profileName" maxlength="20" placeholder="Your name">
+
+
+                <button id="save" class="btn primary">
+
+                    Save Profile
+
+                </button>
+
+
+                <button id="reset" class="btn secondary">
+
+                    Reset Progress
+                    <button id="logout" class="btn secondary">
+                        Logout
+                    </button>
+
+                </button>
+
+
+                <small class="note">
+
+                    This is a local demo profile.
+                    No password or personal data
+                    is sent to a server.
+
+                </small>
+
+            </div>
+        </div>
+        <!-- =====================================================
+     LOGIN MODAL
+     ===================================================== -->
+
+        <div id="authModal" class="auth-modal hidden">
+
+            <div class="auth-box">
+
+                <button id="authClose" class="auth-close">
+
+                    ×
+
+                </button>
+
+
+                <div class="auth-logo">
+
+                    ⌨️
+
+                </div>
+
+
+                <div class="eyebrow">
+
+                    TYPING AREA BY SIDDHU
+
+                </div>
+
+
+                <h2 id="authTitle">
+
+                    Welcome Back
+
+                </h2>
+
+
+                <p id="authSubtitle">
+
+                    Login to continue practicing.
+
+                </p>
+
+
+                <!-- =========================
+             SIGN UP NAME
+             ========================= -->
+
+                <div id="signupNameBox" class="auth-field hidden">
+
+                    <label>
+                        Your Name
+                    </label>
+
+                    <input id="authName" type="text" maxlength="30" placeholder="Enter your name">
+
+                </div>
+
+
+                <!-- =========================
+             EMAIL
+             ========================= -->
+
+                <div class="auth-field">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input id="authEmail" type="email" placeholder="Enter your email" autocomplete="email">
+
+                </div>
+
+
+                <!-- =========================
+             PASSWORD
+             ========================= -->
+
+                <div class="auth-field">
+
+                    <label>
+                        Password
+                    </label>
+
+                    <input id="authPassword" type="password" placeholder="Enter password"
+                        autocomplete="current-password">
+
+                </div>
+
+
+                <p id="authError" class="auth-error hidden">
+                </p>
+
+
+                <button id="authSubmit" class="btn primary auth-submit">
+
+                    Login
+
+                </button>
+
+
+                <p class="auth-switch">
+
+                    <span id="authSwitchText">
+                        Don't have an account?
+                    </span>
+
+                    <button id="authSwitch" type="button">
+
+                        Create Account
+
+                    </button>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- =====================================================
+     MAIN JAVASCRIPT
+===================================================== -->
+
+        <script src="practice/ssc-chsl.js"></script>
+        <script src="script.js"></script>
+        <script type="module" src="auth.js"></script>
+        <script type="module" src="auth-gate.js"></script>
+
+</body>
+
+</html>

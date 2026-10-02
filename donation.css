@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f0edff;
+
+    color: #171522;
+}
+
+
+/* Main Page */
+
+.page {
+    min-height: 100vh;
+    padding: 18px 5%;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 55px;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    gap: 8px;
+
+    text-decoration: none;
+}
+
+.logo span {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #171522;
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: 900;
+
+    box-shadow: 0 4px 0 #171522;
+}
+
+.logo span:nth-child(1) {
+    background: #ffd43b;
+}
+
+.logo span:nth-child(2) {
+    background: #ff5a9d;
+}
+
+.logo span:nth-child(3) {
+    background: #55c7eb;
+}
+
+.logo span:nth-child(4) {
+    background: #40d99b;
+}
+
+
+/* Top Button */
+
+.top-btn {
+    text-decoration: none;
+
+    padding: 9px 22px;
+
+    background: #171522;
+    color: #ffd43b;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 0.5px;
+
+    box-shadow: 0 3px 0 #000;
+}
+
+
+/* Main Layout */
+
+main {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 430px;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/* Left Content */
+
+.content {
+    max-width: 600px;
+}
+
+
+/* Heading */
+
+h1 {
+    font-size: clamp(48px, 6vw, 70px);
+
+    line-height: 0.98;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 28px;
+}
+
+h1 span {
+    display: inline-block;
+
+    border: 3px solid #171522;
+
+    border-radius: 15px;
+
+    padding: 2px 12px 7px;
+
+    box-shadow: 0 6px 0 #171522;
+}
+
+.pink {
+    background: #ff5799;
+}
+
+.blue {
+    background: #55c7eb;
+}
+
+.green {
+    background: #40d99b;
+
+    min-width: 315px;
+
+    text-align: center;
+}
+
+
+/* Text Boxes */
+
+.yellow-box,
+.white-box {
+    width: 100%;
+
+    padding: 18px;
+
+    border: 3px solid #171522;
+
+    border-radius: 16px;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+    box-shadow: 0 6px 0 #171522;
+}
+
+.yellow-box {
+    background: #ffd43b;
+
+    margin-bottom: 18px;
+}
+
+.white-box {
+    background: white;
+
+    margin-bottom: 20px;
+}
+
+
+/* Free Box */
+
+.free-box {
+    display: inline-block;
+
+    padding: 10px 17px;
+
+    background: #9672ff;
+
+    color: white;
+
+    border: 3px solid #171522;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    box-shadow: 0 5px 0 #171522;
+}
+
+
+/* Donation Card */
+
+.donation-box {
+    background: #ff7447;
+
+    border: 3px solid #171522;
+
+    border-radius: 22px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    transform: rotate(2deg);
+
+    box-shadow: 9px 10px 0 #171522;
+}
+
+
+/* Donation Heading */
+
+.donation-box h2 {
+    font-size: 28px;
+
+    margin-bottom: 3px;
+}
+
+.donation-box p {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+
+/* QR */
+
+.qr-container {
+    width: 210px;
+    height: 210px;
+
+    margin: auto;
+
+    padding: 10px;
+
+    background: white;
+
+    border: 4px solid #171522;
+
+    border-radius: 17px;
+
+    box-shadow: 0 5px 0 #171522;
+}
+
+.qr-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* Scan Note */
+
+.scan-note {
+    max-width: 240px;
+
+    margin: 20px auto 0;
+
+    padding: 11px 12px;
+
+    background: #171522;
+
+    color: white;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    .page {
+        padding: 18px 20px 40px;
+    }
+
+    header {
+        margin-bottom: 35px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .content {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .donation-box {
+        max-width: 430px;
+        width: 100%;
+
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .green {
+        min-width: 250px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .top-btn {
+        font-size: 9px;
+
+        padding: 8px 13px;
+    }
+
+    .logo span {
+        width: 31px;
+        height: 31px;
+
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 40px;
+
+        letter-spacing: -2px;
+    }
+
+    .green {
+        min-width: 220px;
+    }
+
+    .donation-box {
+        padding: 22px 15px;
+    }
+
+    .qr-container {
+        width: 200px;
+        height: 200px;
+    }
+}

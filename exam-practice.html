@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Typing Practice | Typing Area by Siddhu</title>
+
+    <link rel="stylesheet" href="exam-practice.css">
+
+</head>
+
+<body>
+
+    <header class="test-header">
+
+        <a 
+        href="index.html#exams" 
+        class="back">
+
+            ← Back
+
+        </a>
+
+        <div class="test-brand">
+
+            <span class="mini-logo">
+                ⌨
+            </span>
+
+            <div>
+
+                <b>
+                    Typing Area
+                </b>
+
+                <small>
+                    BY SIDDHU
+                </small>
+
+            </div>
+
+        </div>
+
+       <div class="practice-actions">
+
+    <button
+        id="practiceTheme"
+        class="practice-theme"
+        type="button">
+        ☾
+    </button>
+
+    <div
+        id="examLogo"
+        class="exam-logo">
+        EXAM
+    </div>
+
+</div>
+
+    </header>
+    
+
+
+    <main class="test-container">
+
+
+        <!-- EXAM INFORMATION -->
+
+        <section class="exam-heading">
+
+            <div>
+
+                <div id="examTag" class="tag">
+                    EXAM
+                </div>
+
+                <h1 id="examTitle">
+                    Typing Practice
+                </h1>
+
+                <p id="examDescription">
+                    Practice typing accurately and improve your speed.
+                </p>
+
+            </div>
+
+
+            <div class="set-select">
+
+                <label>
+                    Practice Set
+                </label>
+
+                <select id="setSelect">
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- SET INFO -->
+
+        <section class="set-info">
+
+            <div>
+                <span>SET</span>
+                <b id="setName">Set 1</b>
+            </div>
+
+            <div>
+                <span>DIFFICULTY</span>
+                <b id="difficulty">Medium</b>
+            </div>
+
+            <div>
+                <span>DURATION</span>
+                <b id="durationLabel">10 min</b>
+            </div>
+
+            <div>
+                <span>TARGET</span>
+                <b id="target">Typing</b>
+            </div>
+
+        </section>
+
+
+        <!-- LIVE STATS -->
+
+        <section class="live-stats">
+
+            <div class="live-card">
+
+                <span>TIME</span>
+
+                <strong id="time">
+                    10:00
+                </strong>
+
+            </div>
+
+
+            <div class="live-card">
+
+                <span>WPM</span>
+
+                <strong id="wpm">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="live-card">
+
+                <span>ACCURACY</span>
+
+                <strong id="accuracy">
+                    100%
+                </strong>
+
+            </div>
+
+
+            <div class="live-card">
+
+                <span>ERRORS</span>
+
+                <strong id="errors">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- TYPING AREA -->
+
+        <section class="typing-card">
+
+            <div class="typing-head">
+
+                <div>
+
+                    <span class="live-dot"></span>
+
+                    <b>
+                        Live Typing Test
+                    </b>
+
+                </div>
+
+                <span id="status" class="status">
+                    Ready
+                </span>
+
+            </div>
+
+
+            <div id="passage" class="passage">
+
+            </div>
+
+
+            <textarea id="input" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"
+                placeholder="Start typing here...">
+        </textarea>
+
+
+            <div class="bottom-controls">
+
+                <button id="restart" class="secondary-btn">
+
+                    ↻ Restart
+
+                </button>
+
+                <button id="finish" class="primary-btn">
+
+                    Finish Test
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section id="result" class="result hidden">
+
+            <div class="result-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <small>
+                    TEST COMPLETE
+                </small>
+
+                <h2>
+                    Good work!
+                </h2>
+
+                <p id="resultText">
+                    0 WPM · 100% accuracy
+                </p>
+
+            </div>
+
+            <button id="retry" class="primary-btn">
+
+                Try Again
+
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <span>
+            ⌨ Typing Area by Siddhu
+        </span>
+
+        <span>
+            Practice • Progress • Perform
+        </span>
+
+    </footer>
+
+
+    <script src="exam-practice.js"></script>
+
+</body>
+
+</html>

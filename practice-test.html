@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="theme-color"
+        content="#0f172a">
+
+    <title>
+        Normal Typing Practice | Typing Area by Siddhu
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="practice-test.css">
+
+</head>
+
+
+<body>
+
+<header class="test-header">
+
+    <a
+        href="index.html?home=1"
+        class="back">
+
+        ← Typing Area
+
+    </a>
+
+
+    <div class="test-brand">
+
+        <span class="mini-logo">
+            ⌨
+        </span>
+
+        <div>
+
+            <b>
+                Typing Area
+            </b>
+
+            <small>
+                BY SIDDHU
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="practice-actions">
+
+    <button
+        id="practiceTheme"
+        class="practice-theme"
+        type="button">
+        ☾
+    </button>
+
+    <div
+        id="examLogo"
+        class="exam-logo">
+        EXAM
+    </div>
+
+</div>
+
+</header>
+
+
+
+<main class="test-container">
+
+
+    <!-- =================================================
+         HEADING
+    ================================================== -->
+
+    <section class="exam-heading">
+
+        <div>
+
+            <div
+                id="examTag"
+                class="tag">
+
+                NORMAL PRACTICE
+
+            </div>
+
+
+            <h1 id="examTitle">
+                Normal Typing Practice
+            </h1>
+
+
+            <p id="examDescription">
+                Build your typing ability step by step.
+            </p>
+
+        </div>
+
+
+        <div class="heading-actions">
+
+            <button
+                id="progressBtn"
+                class="small-tool-btn">
+
+                📊 Your Progress
+
+            </button>
+
+
+            <div class="set-select">
+
+                <label id="selectorLabel">
+                    SELECT LEVEL
+                </label>
+
+                <select id="setSelect"></select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LEVEL PANEL
+    ================================================== -->
+
+    <section class="level-panel">
+
+        <div class="level-panel-top">
+
+            <div>
+
+                <span class="mini-label">
+                    CURRENT LEVEL
+                </span>
+
+                <strong id="levelProgressTitle">
+                    Level 1 · Home Row
+                </strong>
+
+            </div>
+
+
+            <div
+                id="unlockMessage"
+                class="unlock-message">
+
+                Target: 20 WPM + 90% accuracy
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="levelTrack"
+            class="level-track">
+
+        </div>
+
+
+        <div class="keyboard-info">
+
+            <div>
+
+                <span>
+                    KEYS
+                </span>
+
+                <strong id="keys">
+                    ASDF JKL;
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    TARGET WPM
+                </span>
+
+                <strong id="targetDisplay">
+                    20 WPM
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    REQUIRED ACCURACY
+                </span>
+
+                <strong id="accuracyTarget">
+                    90%
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SET INFO
+    ================================================== -->
+
+    <section class="set-info">
+
+        <div>
+
+            <span>
+                LEVEL
+            </span>
+
+            <b id="setName">
+                Level 1
+            </b>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                DIFFICULTY
+            </span>
+
+            <b id="difficulty">
+                Beginner
+            </b>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                DURATION
+            </span>
+
+            <b id="durationLabel">
+                60 sec
+            </b>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                TARGET
+            </span>
+
+            <b id="target">
+                20 WPM
+            </b>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LIVE STATS
+    ================================================== -->
+
+    <section class="live-stats">
+
+        <div class="live-card">
+
+            <span>
+                TIME
+            </span>
+
+            <strong id="time">
+                01:00
+            </strong>
+
+        </div>
+
+
+        <div class="live-card">
+
+            <span>
+                WPM
+            </span>
+
+            <strong id="wpm">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="live-card">
+
+            <span>
+                ACCURACY
+            </span>
+
+            <strong id="accuracy">
+                100%
+            </strong>
+
+        </div>
+
+
+        <div class="live-card">
+
+            <span>
+                ERRORS
+            </span>
+
+            <strong id="errors">
+                0
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TYPING CARD
+    ================================================== -->
+
+    <section class="typing-card">
+
+        <div class="typing-head">
+
+            <div>
+
+                <span
+                    id="statusDot"
+                    class="live-dot">
+
+                </span>
+
+                <b>
+                    Live Typing Practice
+                </b>
+
+            </div>
+
+
+            <span
+                id="status"
+                class="status">
+
+                Ready
+
+            </span>
+
+        </div>
+
+
+        <div
+            id="passage"
+            class="passage">
+
+        </div>
+
+
+        <textarea
+            id="input"
+            spellcheck="false"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            placeholder="Start typing here...">
+        </textarea>
+
+
+        <div class="bottom-controls">
+
+            <button
+                id="restart"
+                class="secondary-btn">
+
+                ↻ Restart
+
+            </button>
+
+
+            <button
+                id="finish"
+                class="primary-btn">
+
+                Finish Test
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         RESULT
+    ================================================== -->
+
+    <section
+        id="result"
+        class="result hidden">
+
+        <div class="result-icon">
+            ✓
+        </div>
+
+
+        <div class="result-main">
+
+            <small>
+                TEST COMPLETE
+            </small>
+
+
+            <h2 id="resultTitle">
+                Good work!
+            </h2>
+
+
+            <p id="resultText">
+                0 WPM · 100% accuracy
+            </p>
+
+
+            <p
+                id="requirementResult"
+                class="requirement-result">
+
+            </p>
+
+        </div>
+
+
+        <div class="result-actions">
+
+            <button
+                id="retry"
+                class="secondary-btn">
+
+                ↻ Try Again
+
+            </button>
+
+
+            <button
+                id="nextLevel"
+                class="primary-btn hidden">
+
+                Next Level →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ROADMAP SIDE BUTTON
+    ================================================== -->
+
+    <button
+        id="roadmapBtn"
+        class="roadmap-side-btn">
+
+        <span>☰</span>
+        <b>Roadmap</b>
+
+    </button>
+
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+</main>
+
+
+<footer>
+
+    <span>
+        ⌨ Typing Area by Siddhu
+    </span>
+
+    <span>
+        Practice • Progress • Perform
+    </span>
+
+</footer>
+
+
+
+<!-- =====================================================
+     PROGRESS MODAL
+===================================================== -->
+
+<div
+    id="progressModal"
+    class="modal-overlay hidden">
+
+    <div class="modal-box">
+
+        <button
+            class="modal-close"
+            data-close="progressModal">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-icon">
+            📊
+        </div>
+
+
+        <div class="modal-label">
+            YOUR PROGRESS
+        </div>
+
+
+        <h2>
+            Normal Practice
+        </h2>
+
+
+        <p class="modal-subtitle">
+            Your current progress and performance.
+        </p>
+
+
+        <div class="progress-summary">
+
+            <div>
+                <span>Current Level</span>
+                <strong id="modalCurrentLevel">
+                    Level 1
+                </strong>
+            </div>
+
+
+            <div>
+                <span>Unlocked</span>
+                <strong id="modalUnlockedLevel">
+                    Level 1
+                </strong>
+            </div>
+
+
+            <div>
+                <span>Best WPM</span>
+                <strong id="modalBestWpm">
+                    0
+                </strong>
+            </div>
+
+
+            <div>
+                <span>Best Accuracy</span>
+                <strong id="modalBestAccuracy">
+                    0%
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="modal-progress-wrap">
+
+            <div class="modal-progress-top">
+
+                <span>
+                    Overall progress
+                </span>
+
+                <b id="modalProgressPercent">
+                    0%
+                </b>
+
+            </div>
+
+
+            <div class="modal-progress-track">
+
+                <div
+                    id="modalProgressBar"
+                    class="modal-progress-fill">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="primary-btn modal-action"
+            data-close="progressModal">
+
+            Close
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ROADMAP MODAL
+===================================================== -->
+
+<div
+    id="roadmapModal"
+    class="modal-overlay hidden">
+
+    <div class="modal-box roadmap-modal-box">
+
+        <button
+            class="modal-close"
+            data-close="roadmapModal">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-icon">
+            🗺️
+        </div>
+
+
+        <div class="modal-label">
+            LEVEL ROADMAP
+        </div>
+
+
+        <h2>
+            Your Road to Mastery
+        </h2>
+
+
+        <p class="modal-subtitle">
+            Complete the current level target to unlock the next one.
+        </p>
+
+
+        <div
+            id="modalRoadmap"
+            class="modal-roadmap">
+
+        </div>
+
+
+        <button
+            class="primary-btn modal-action"
+            data-close="roadmapModal">
+
+            Close Roadmap
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="practice-test.js"></script>
+<script type="module" src="firebase-config.js"></script>
+<script type="module" src="auth.js"></script>
+<script type="module" src="auth-gate.js"></script>
+
+</body>
+
+</html>
